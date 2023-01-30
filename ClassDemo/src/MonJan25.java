@@ -74,14 +74,6 @@ public class MonJan25 {
         int someNum = scanner.nextInt();
         String someName = scanner.nextLine();
 
-        double pound;
-        double gravity;
-        Scanner scanner1 = new Scanner(System.in);
-        System.out.print(" Enter the weigh: ");
-        gravity = scanner1.nextDouble();
-        pound = ( pound * 17) / 100;
-        System.out.printf(" %f weigh is approximately %.1f weigh\n ",gravity, weight);
-
 
 
 
