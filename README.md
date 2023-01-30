@@ -1,10 +1,10 @@
-## Java Kirkwood 2023
+# Java Kirkwood 2023
  This is the work  I complete for my CIS-171 
  Java course at Kirkwood Community College.
  Below is a journal of all the things I learned 
  throughout the class.
  
-### Introduction
+## Introduction
 In the introduction unit we created accounts and 
 installed software needed for the class.
 
@@ -28,7 +28,7 @@ I will __Add-Commit-Push (ACP)__
 
 git add . git commit -m "describe my work" git push origin main
 
-### Chapter 1
+## Chapter 1
 In chapter 1, we learned about the arithmetic operators which are: 
 __+,-,(*),/__ 
 
@@ -48,7 +48,7 @@ class IfDemo{
 ```
 This is a little example about the If statement
 
-### Chapter 2
+## Chapter 2
 In this chapter there are couples of word that should be used in **Java**
 
 Here are the important word to retain
