@@ -72,7 +72,17 @@ public class MonJan25 {
         liters = gallons * 3.7854;
         System.out.printf(" %f gallons is approximately %.2f liters \n", gallons, liters);
         int someNum = scanner.nextInt();
-        String someName = scanner.nextLine()
+        String someName = scanner.nextLine();
+
+        double pound;
+        double gravity;
+        Scanner scanner1 = new Scanner(System.in);
+        System.out.print(" Enter the weigh: ");
+        gravity = scanner1.nextDouble();
+        pound = ( pound * 17) / 100;
+        System.out.printf(" %f weigh is approximately %.1f weigh\n ",gravity, weight);
+
+
 
 
     }
