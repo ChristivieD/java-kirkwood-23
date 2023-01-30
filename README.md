@@ -10,7 +10,7 @@ installed software needed for the class.
 
 Using [IntelliJ](https://jetbrains.com/idea) we created a module with a **Java 
 class** inside it. Inside the class we created a main method 
-that displays a message in terminal. We can type "so ut" followed by the 
+that displays a message in terminal. We can type "sout" followed by the 
 key to generate the `System.out.println()` statement.
 ``` Java 
 public class MyClass {
