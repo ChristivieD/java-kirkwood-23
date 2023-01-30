@@ -27,3 +27,40 @@ Going forward, whenever I complete a task
 I will __Add-Commit-Push (ACP)__
 
 git add . git commit -m "describe my work" git push origin main
+
+### Chapter 1
+In chapter 1, we learned about the arithmetic operators which are: 
+__+,-,(*),/__ 
+
+we can use it with the variables.
+There are also two control statement __the if and for statement__ which works like the **IF**
+and **FOR** statement in any other program.
+``` Java
+
+class IfDemo{
+ public static void main(String []args){
+  int a, b, c;
+  a = 2;
+  b = 3;
+ if (a< b) System.out.println("a less than b ")
+ }
+}
+```
+This is a little example about the If statement
+
+### Chapter 2
+In this chapter there are couples of word that should be used in **Java**
+
+Here are the important word to retain
+
+The Boolean represents __true or false__ values as in Python
+
+The byte is  8-bit integer
+
+The double is a double-precision floating point  
+
+the float is a single-precision floating point
+
+the int 
+
+the long and short
