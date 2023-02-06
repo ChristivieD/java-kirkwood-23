@@ -19,7 +19,7 @@ public class WedFeb1 {
         // non-static method methods are called on objects, not the class name
 
 
-        Scanner console = new Scanner(System.in) ; // console is an object. scanner is a method
+        Scanner console = new Scanner(System.in); // console is an object. scanner is a method
         double s = console.nextDouble(); // Calling a non-static method
         long  reallyBigNum = 999999999999999L;
         float f = 99.999999f;
