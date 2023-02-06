@@ -7,6 +7,3 @@ public class MonJan23 {
     }
 
 }
-class WedJan25 {
-
-}
