@@ -51,11 +51,11 @@ public class WedFeb1 {
         System.out.println("C:\\Users\\myUserNAme\\Kirkwood");
 
         // Calculate the area of a circle
-        System.out.print("Enter the radius: ");
+        System.out.println("Enter the radius: ");
         double radius = console.nextDouble();
         double areaOfCircle = Math.PI * Math.pow(radius, 2);
         // Calculate the volume of a cylinder
-        System.out.print("Enter the height: ");
+        System.out.println("Enter the height: ");
         double height = console.nextDouble();
         double VolumeOfCylinder = areaOfCircle * height;
         System.out.printf("%.1f\n", VolumeOfCylinder);
