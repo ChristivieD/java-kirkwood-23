@@ -32,10 +32,9 @@ public class Cylinder extends Shape {
         this.circle = circle;
     }
 
-
     @Override
-    public String getArea() {
-        return null;
+    public double getArea() {
+        return 2 * circle.getArea() + 2 *Math.PI * circle.getRadius() * this.height;
     }
     public double getVolume(){
         return circle.getArea() * this.height;

@@ -9,6 +9,7 @@ public class Circle extends Shape {
         radius = 1;
     }
     public Circle(double radius) {
+        super(1);
         setRadius(radius);
     }
     // methods
@@ -21,9 +22,10 @@ public class Circle extends Shape {
         }
         this.radius = radius;
     }
-    public String getArea() {
+
+
+    public double getArea() {
         double area =  Math.PI * Math.pow(radius, 2);
-        String areaStr = String.format("%.2f", area);
-        return areaStr;
+        return area;
     }
 }
