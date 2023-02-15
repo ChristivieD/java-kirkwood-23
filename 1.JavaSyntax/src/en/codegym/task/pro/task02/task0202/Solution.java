@@ -10,6 +10,7 @@ public class Solution {
         int centimeters = 243;
 
         int meters = 0; //write your code here
+        meters = centimeters / 100;
 
         System.out.println(meters);
     }
