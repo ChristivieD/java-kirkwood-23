@@ -1,12 +1,21 @@
+package ch1andch2;
+
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class MonFeb13 {
+
+    public static int temperature;
     public static int diceRoll(){
         int roll = (int)(Math.random() * 6) + 1;
         return roll;
     }
     public static void main(String[] args) {
+        temperature = 40;
+        System.out.println(temperature);
+
+
+        int i;
         for (int i = 0; i < 20; i++){
             System.out.println(diceRoll());
         }

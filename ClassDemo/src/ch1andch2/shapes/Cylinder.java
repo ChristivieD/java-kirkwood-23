@@ -1,4 +1,4 @@
-package shapes;
+package ch1andch2.shapes;
 
 public class Cylinder extends Shape {
     private double height;

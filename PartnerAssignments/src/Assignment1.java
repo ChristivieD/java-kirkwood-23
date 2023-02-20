@@ -17,6 +17,10 @@ public class Assignment1 {
             System.out.println("\nLargest between "+num1+" and "+num2+" is" +num2);
         else
         System.out.println("\nBoth Number are same");
+        // part2
+        // navigator : Miyada
+        // driver: Christivie
+
 
     }
 }

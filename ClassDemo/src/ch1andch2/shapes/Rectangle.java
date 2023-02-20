@@ -1,4 +1,4 @@
-package shapes;
+package ch1andch2.shapes;
 
 public class Rectangle extends Shape {
     // instance variables
@@ -43,7 +43,7 @@ public class Rectangle extends Shape {
     @Override
     public String getArea() {
         double area = length * height;
-        String areaStr = String.format("%.2f", area) ;
+        String areaStr = String.format("%.2f", area);
         return areaStr;
     }
 }
