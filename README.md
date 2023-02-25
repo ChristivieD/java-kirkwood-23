@@ -64,3 +64,41 @@ the float is a single-precision floating point
 the int 
 
 the long and short
+## chapter 3
+In chapter 3, we learned about the statement that conyrol a program;s 
+flow of execution. Here are three categories: **selection statement** (if and switch),
+**iteration statement** (for, while, and do-while loops), and **jump statement** 
+(break,continue, and return).
+Here is a small  example of one of the statement below:
+```java
+class switchDemo{
+ public static void main(String[] args) {
+  int i;
+  for(i = 0; i < 10; i++)
+      switch(i){
+       case 0:
+        System.out.println("i is zero");
+        break;
+        case 1:
+         System.out.println(" i is one");
+         break;
+       case 2 :
+        System.out.println("i is two");
+        break;
+       default:
+        System.out.println("i is three or more");
+  }
+ }
+}
+```
+The general form of a __For loop__ is:
+**for(initialization; condition; iteration){
+    statement sequence
+        }**
+The general form of a __While loop__ is:
+ **while(condition) statement;**
+The general form of a __do-while loop__ is:
+**do{
+    statements;
+    } while(condition);**
+
