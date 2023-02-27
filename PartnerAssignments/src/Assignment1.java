@@ -18,8 +18,20 @@ public class Assignment1 {
         else
         System.out.println("\nBoth Number are same");
         // part2
-        // navigator : Miyada
-        // driver: Christivie
+        // navigator : Christivie
+        // driver: Miyada
+        double radius = scanner.nextDouble();
+        System.out.println(radius);
+        if(radius > 0){
+            double circ = 2 * Math.PI * radius;
+            double area = (Math.PI) * Math.pow(radius,2);
+            System.out.println(circ);
+            System.out.println(area);
+        }
+        else if(radius < 0){
+            System.out.println("Invalid input");
+        }
+
 
 
     }
