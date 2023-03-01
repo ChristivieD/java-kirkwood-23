@@ -12,17 +12,18 @@ public class Solution {
         Scanner scanner = new Scanner(System.in);
 
         double num1, num2, diff;
-        Boolean isEqual;
+        boolean isEqual;
 
         num1 = scanner.nextDouble();
         num2 = scanner.nextDouble();
 
         isEqual = (num1 == num2) ? true:false;
 
-        if (isEqual)
+        if (isEqual) {
             System.out.println("The numbers are equal");
-        //write your code here
-        if (!isEqual)
+        }
+        if (!isEqual) {
             System.out.println("The numbers are not equal");
+        }
     }
 }

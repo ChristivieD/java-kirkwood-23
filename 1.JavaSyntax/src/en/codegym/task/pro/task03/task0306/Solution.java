@@ -21,7 +21,7 @@ public class Solution {
         if((num1 + num2) > num3 || (num3 + num2) > num1 || (num1 + num3) > num2){
             System.out.println(TRIANGLE_EXISTS);
         } else {
-        System.out.println(TRIANGLE_DOES_NOT_EXIST);
+            System.out.println(TRIANGLE_DOES_NOT_EXIST);
         }
     }
 }
