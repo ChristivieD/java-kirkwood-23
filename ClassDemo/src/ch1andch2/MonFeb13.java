@@ -16,12 +16,19 @@ public class MonFeb13 {
 
 
         int i;
-        for (int i = 0; i < 20; i++){
+        for (i =0; i< 5; i++){
+            System.out.println(i + "/3: " + i / 3);
+            System.out.println(i + "/3 with fractions:  " + (double) i / 3);
+            System.out.println();
+        }
+
+
+        for (i = 0; i < 20; i++){
             System.out.println(diceRoll());
         }
         byte b = 1;
         short s = b;
-        int i = s;
+         i = s;
         long l = i;
 
         long l2 = 2;

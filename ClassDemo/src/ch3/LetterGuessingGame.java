@@ -29,9 +29,9 @@ public class LetterGuessingGame{
                 if (!(guess >= 65 && guess <= 90) && !(guess >= 97 && guess <= 122) ){
                 System.out.println("Invalid letter. Guess again: ");
             }else if (guess > answer){
-                    System.out.println("Incorrect. Guess lowe: ");
+                    System.out.print("Incorrect. Guess lowe: ");
                 } else {
-                    System.out.println("Incorrect. Guess higher: ");
+                    System.out.print("Incorrect. Guess higher: ");
                 }
             }
         }

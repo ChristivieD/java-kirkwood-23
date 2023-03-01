@@ -12,9 +12,9 @@ public class Assignment1 {
         System.out.println("enter the num2:");
          num2 = scanner.nextDouble();
         if(num1 >= num2)
-            System.out.println("\nLargest between "+num1+" and "+num2+" is" +num1);
+            System.out.println("\nLargest between "+num1+" and "+num2+" is " +num1);
         else if (num1<num2)
-            System.out.println("\nLargest between "+num1+" and "+num2+" is" +num2);
+            System.out.println("\nLargest between "+num1+" and "+num2+" is " +num2);
         else
         System.out.println("\nBoth Number are same");
         // part2
