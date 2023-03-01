@@ -14,7 +14,7 @@ public class Solution {
 
         if (string1.equals(string2)) {
             System.out.println("The strings are the same");
-        } else if{
+        } else {
             System.out.println("The strings are different");
         }
     }
