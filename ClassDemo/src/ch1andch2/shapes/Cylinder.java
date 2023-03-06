@@ -14,11 +14,12 @@ public class Cylinder extends Shape {
         setCircle(circle);
     }
     public double getHeight() {
+
         return height;
     }
 
     public void setHeight(double height) {
-        if(height<=0){
+        if(height <= 0){
             throw  new IllegalArgumentException("Height must be greater than 0");
         }
         this.height = height;
@@ -31,6 +32,7 @@ public class Cylinder extends Shape {
     public void setCircle(Circle circle) {
         this.circle = circle;
     }
+
 
     @Override
     public double getArea() {

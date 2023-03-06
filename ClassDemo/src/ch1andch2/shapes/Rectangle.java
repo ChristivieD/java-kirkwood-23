@@ -41,9 +41,8 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public String getArea() {
+    public double getArea() {
         double area = length * height;
-        String areaStr = String.format("%.2f", area);
-        return areaStr;
+        return area;
     }
 }

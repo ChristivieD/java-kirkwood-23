@@ -11,7 +11,7 @@ public class Solution {
         String s2 = "It";
         String s3 = "Just";
 
-        String tagline = "s1"+"s2"+"s3"; //write your code here
+        String tagline = "s1"+"s2"+"s3";
         tagline = s3 + s1 + s2;
 
         System.out.println(tagline);

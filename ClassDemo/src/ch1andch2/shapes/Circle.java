@@ -9,7 +9,7 @@ public class Circle extends Shape {
         radius = 1;
     }
     public Circle(double radius) {
-        super(1);
+        super(0);
         setRadius(radius);
     }
     // methods
@@ -17,15 +17,14 @@ public class Circle extends Shape {
         return radius;
     }
     public void setRadius(double radius) {
-        if (radius > 0) {
-        throw new IllegalArgumentException("This radius must be greater than 0");
+        if (radius <= 0) {
+        throw new IllegalArgumentException("The radius must be greater than 0");
         }
         this.radius = radius;
     }
 
-
-    public double getArea() {
-        double area =  Math.PI * Math.pow(radius, 2);
-        return area;
+    public double getArea(){
+        double area = Math.PI* Math.pow(radius, 2);
+         return area;
     }
 }

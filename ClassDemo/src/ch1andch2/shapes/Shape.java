@@ -9,10 +9,12 @@ public abstract class Shape {
     }
 
     public Shape(int numSides){
+
         setNumSides(numSides);
     }
     // methods
     public int getNumSides() {
+
         return numSides;
     }
 
@@ -23,5 +25,5 @@ public abstract class Shape {
         this.numSides = numSides;
     }
 
-    public abstract String getArea();
+    public abstract double getArea();
 }
