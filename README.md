@@ -61,9 +61,66 @@ The double is a double-precision floating point
 
 the float is a single-precision floating point
 
-the int 
-
+the int
 the long and short
+
+
+## Notes
+- The two primitive data types that store decimal numbers are float and double (most common).
+- float gives you approximately 6-7 decimal digits precision.
+
+- float is represented in 32 bits (4 bytes)
+
+- double gives you approximately 15-16 decimal digits precision, therefore the range of numbers is larger for double.
+
+- double is represented in 64 bits (8 bytes)
+
+- Java provides a built-in Math opens in new window opens in new window class with many helpful methods.
+- Similar to String, and unlike Scanner and BigDecimal, you do not need to import anything to use Math.
+- All Math fields and methods are static, meaning you call them using Math.XXX -- you do not need to instantiate a new Math object like you do for Scanner or BigDecimal.
+- Common items include:
+- Math.PI
+- Returns the double value 3.141592653589793. Note that this is a fixed (or final) value, meaning you can't modify it.
+- Math.abs()
+- Returns the absolute value (distance from 0) of a single numerical value.
+- Math.ceil() and Math.floor()
+- Returns a double rounded up or down.
+- Math.max() and Math.min()
+- Returns the larger or smaller  of two numerical values.
+- Math.pow()
+- Returns a double representing one value raised to a second value.
+- Math.random()
+- Returns a double between 0.00 and 0.99
+- Math.round()
+- Returns a decimal number rounded up or down
+- Math.sqrt()
+- Returns the square root of a single number.
+- Math.hypot()
+- Returns the length of the hypotenuse given the lengths of two sides (Pythagorean theorem)
+- There are many more methods used for calculus, trigonometry, geometry, and more.
+### casting
+double x, y;
+// ...
+(int) (x, y)
+```java
+class CastDemo{
+    public static void main(String[] args) {
+        double x, y;
+        byte b;
+        int i;
+        char ch;
+        
+        x = 5.5;
+        y = 1.5;
+        i = (int) (x/y);
+        System.out.println("Integer outcome of x/y: " + i);
+    }
+}
+
+
+```
+
+
 ## chapter 3
 In chapter 3, we learned about the statement that conyrol a program;s 
 flow of execution. Here are three categories: **selection statement** (if and switch),
