@@ -10,7 +10,7 @@ public class Main {
             main_program:while(true){
                 System.out.println("Select an option: ");
                 // To Do:Prompt user for all options
-                choice = scanner.nextInt();
+                choice = UserInput.getInt(scanner, "Choose an option",1,7);
                 switch(choice){
                     case 1:
                         // Get all records
@@ -23,8 +23,10 @@ public class Main {
                         break;
                     case 4:
                         // Add a new record
-                        String country = UserInput.getString(scanner, "enter the country");
-                        boolean isHardcover = UserInput.getBoolean(scanner, "Is this a african country?");
+                        String country = UserInput.getString(scanner, "enter the title");
+                        boolean isHardcover = UserInput.getBoolean(scanner, "Is this a hardcover book?");
+                        int numPages = UserInput.getInt(scanner, "How many pages", 1);
+                        int temperature = UserInput.getInt(scanner, "what temperature is it today?");
                         break;
                     case 5:
                         // Update a single records
@@ -40,4 +42,5 @@ public class Main {
             System.out.println("Good bye!");
         } // close of Scanner
     } // close of main method
+    // write other methods here
 } // close of main class

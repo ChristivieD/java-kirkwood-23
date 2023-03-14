@@ -11,6 +11,7 @@ public class Solution {
 
     public static void main(String[] args) {
         //write your code here
+
         for(int i = 0; i < strings.length; i++){
             if (i % 2 == 0){
                 strings[i] = EVEN;
@@ -24,6 +25,5 @@ public class Solution {
             System.out.println(" value = " + strings[i]);
 
         }
-
     }
 }

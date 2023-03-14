@@ -6,17 +6,16 @@ Working with elements of an array
 
 public class Solution {
 
-    public static int[] array = new int[]{8, -1, 9, 2, -6, 7};
-
+    public static int[] array = new int[]{-1, 2, 3, -4, -5};
     public static void main(String[] args) {
         //write your code here
-        for (int i = 0; i < array.length; i++){
-            if (array[i] % 2 == 0) {
-                array[i] *= -1;
-            }
+        if(array[0] % 2 == 0){
+           array [0] = array[0];
         }
-        for (int value: array){
-            System.out.println(value);
-        }
+        System.out.println(array[0]);
+        System.out.println(array[1]);
+        System.out.println(array[2]);
+        System.out.println(array[3]);
+        System.out.println(array[4]);
     }
 }
