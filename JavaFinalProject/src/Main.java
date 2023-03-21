@@ -1,5 +1,6 @@
 import utilities.UserInput;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Main {
@@ -23,10 +24,14 @@ public class Main {
                         break;
                     case 4:
                         // Add a new record
-                        String country = UserInput.getString(scanner, "enter the title");
-                        boolean isHardcover = UserInput.getBoolean(scanner, "Is this a hardcover book?");
-                        int numPages = UserInput.getInt(scanner, "How many pages", 1);
-                        int temperature = UserInput.getInt(scanner, "what temperature is it today?");
+//                        String country = UserInput.getString(scanner, "enter the title");
+//                        boolean isHardcover = UserInput.getBoolean(scanner, "Is this a hardcover book?");
+//                        int numPages = UserInput.getInt(scanner, "How many pages", 1);
+//                        int temperature = UserInput.getInt(scanner, "what temperature is it today?");
+                        LocalDate publicationDate = UserInput.getDate(scanner,"enter the date of publication");
+                        System.out.println("Month: " + publicationDate.getMonthValue());
+                        System.out.println("Day of month: " + publicationDate.getDayOfMonth());
+                        System.out.println("Year: " + publicationDate.getYear());
                         break;
                     case 5:
                         // Update a single records

@@ -1,13 +1,22 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MidTerm {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int num1 = scanner.nextInt();
-        int num2 = scanner.nextInt();
-        if(num1 > num2);
-            System.out.println(num1 > num2 ?  num1: num2);
-
+        int highest = Integer.MIN_VALUE;
+        int lowest = Integer.MAX_VALUE;
+        while(true){
+            int num =0;
+            try {
+                num = scanner.nextInt();
+            } catch(InputMismatchException e){
+               break;
+            }
+            // if the num is greater than the max, set it
+            // if the num is less than the min, set it
+        }
+        System.out.println(highest + " " +lowest);
     }
 
 
