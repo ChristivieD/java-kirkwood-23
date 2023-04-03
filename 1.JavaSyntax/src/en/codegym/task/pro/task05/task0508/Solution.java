@@ -11,11 +11,11 @@ public class Solution {
 
     public static void main(String[] args) {
         //write your code here
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         strings= new String[6];
         for(int i =0; i<strings.length;i++){
-            strings[i]=input.nextLine();
+            strings[i]=scanner.nextLine();
         }
 
         for(int i =0; i<strings.length;i++){

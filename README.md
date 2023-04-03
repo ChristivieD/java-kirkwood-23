@@ -159,3 +159,19 @@ The general form of a __do-while loop__ is:
     statements;
     } while(condition);**
 
+// class example
+```java
+//   public static void doubleArray(int [] array){
+//        for (int i = 0; i < array.length; i ++){
+//            array[i] *=2;
+//        }
+//            
+//   }
+```
+// if you want to modify the values in an array, use a count-controlled loop
+// not a for-each loop.
+// if you pass a primitive variable (int, double, boolean, char,etc) to a method, you are passing a copy of the value
+// change made to the copy do not affect the original. if you want to
+// the original, you must return a value from the method.
+//If you pass an object variable (array, Shape, Book, etc) to a method, you are passing a reference of 
+the object. Changes made to the reference will affect the original. No return type is need for the method.

@@ -13,7 +13,7 @@ public class Solution {
         //write your code here
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        array = new int [n];
+        int [] array = new int [n];
         for(int i = 0; i < n; i++){
             array[i] = scanner.nextInt();
         }

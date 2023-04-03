@@ -1,3 +1,4 @@
+import model.Anime;
 import utilities.UserInput;
 
 import java.time.LocalDate;
@@ -9,7 +10,6 @@ public class Main {
         try(Scanner scanner = new Scanner(System.in)){
             int choice = 0;
             main_program:while(true){
-                System.out.println("Select an option: ");
                 // To Do:Prompt user for all options
                 choice = UserInput.getInt(scanner, "Choose an option",1,7);
                 switch(choice){
@@ -24,14 +24,18 @@ public class Main {
                         break;
                     case 4:
                         // Add a new record
-//                        String country = UserInput.getString(scanner, "enter the title");
-//                        boolean isHardcover = UserInput.getBoolean(scanner, "Is this a hardcover book?");
-//                        int numPages = UserInput.getInt(scanner, "How many pages", 1);
-//                        int temperature = UserInput.getInt(scanner, "what temperature is it today?");
-                        LocalDate publicationDate = UserInput.getDate(scanner,"enter the date of publication");
-                        System.out.println("Month: " + publicationDate.getMonthValue());
-                        System.out.println("Day of month: " + publicationDate.getDayOfMonth());
-                        System.out.println("Year: " + publicationDate.getYear());
+                        Anime anime1 = new Anime("Demon slayer", 24,1.99,
+                                LocalDate.of(2023,04,12));
+                        System.out.println(anime1.getTitle());
+                        System.out.println(anime1.getMinutes());
+                        Anime anime2 = new Anime("Jujutsu kaisen",22.54,2.99,
+                                LocalDate.of(2023,04,20));
+                        System.out.println(anime2.getTitle());
+                        System.out.println(anime2.getMinutes());
+                        System.out.println(Anime.getAnimeCount());
+                        Anime anime3 = anime1;
+                        anime3.setMinutes(24);
+                        System.out.println(anime1.getMinutes());
                         break;
                     case 5:
                         // Update a single records
