@@ -175,3 +175,7 @@ The general form of a __do-while loop__ is:
 // the original, you must return a value from the method.
 //If you pass an object variable (array, Shape, Book, etc) to a method, you are passing a reference of 
 the object. Changes made to the reference will affect the original. No return type is need for the method.
+An arraylist is a class
+example
+Book [] books = new Book[10];
+ArrayList<Book> books = new ArrayList

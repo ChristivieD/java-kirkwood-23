@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 public class Anime {
     private String title;
+    private String author;
     private double minutes;
     private  double rating;
 //    private String site;
@@ -18,9 +19,9 @@ public class Anime {
         animeCount++;
     }
 
-    public Anime(String title, String auhtor, double minutes, double rating, LocalDate releaseDate){
+    public Anime(String title, String author, double minutes, double rating, LocalDate releaseDate){
         this.title = title;
-        this.author = auhtor;
+        this.author = author;
         this.minutes = minutes;
         this.rating = rating;
 //        this.site = site;
@@ -30,6 +31,10 @@ public class Anime {
 
     public String getTitle() {
         return title;
+    }
+
+    public String getAuthor() {
+        return author;
     }
 
     public double getMinutes() {
@@ -54,6 +59,10 @@ public class Anime {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public void setMinutes(double minutes) {
