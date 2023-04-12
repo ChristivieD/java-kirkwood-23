@@ -9,7 +9,6 @@ public class Anime implements Comparable<Anime> {
     private int season;
     private  int episode;
     private  double rating;
-//    private String site;
     private LocalDate releaseDate;
     private static int animeCount = 0;
     public Anime(){
@@ -57,10 +56,6 @@ public class Anime implements Comparable<Anime> {
     public double getRating() {
         return rating;
     }
-
-//    public String getSite() {
-//        return site;
-//    }
 
     public LocalDate getReleaseDate() {
         return releaseDate;

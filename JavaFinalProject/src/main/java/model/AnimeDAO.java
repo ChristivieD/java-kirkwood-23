@@ -15,7 +15,7 @@ public class AnimeDAO {
 
     public static void retrieveData() {
         if(animes == null){
-            try(Scanner scanner = new Scanner(new File("JavaFinalProject\\src\\main\\resources\\anime.txt"))){
+            try(Scanner scanner = new Scanner(new File("JavaFinalProject\\src\\main\\resources\\Anime_data.txt"))){
                 animes = new ArrayList<>();
                 scanner.nextLine(); // read in the file row and don't do anything with it.
                 while(scanner.hasNextLine()){
@@ -23,10 +23,9 @@ public class AnimeDAO {
                     String [] values = line.split("\t");
                     Anime anime = new Anime();
                     anime.setTitle(WordUtils.capitalize(values[0].toLowerCase()));
-                    anime.setType(WordUtils.capitalize(values[3]));
+                    anime.setType(WordUtils.capitalize(values[2]));
                     anime.setEpisode(Integer.parseInt(values[4]));
                     anime.setSeason(Integer.parseInt(values[3]));
-                    anime.setType(WordUtils.capitalize(values[2]));
                     anime.setAuthor(WordUtils.capitalize(values[1]));
                     anime.setRating(Double.parseDouble(values[5]));
                     DateTimeFormatter format = DateTimeFormatter.ofPattern("M/d/yyyy");

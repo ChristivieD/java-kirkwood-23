@@ -1,6 +1,7 @@
 package tasks;
 
 import model.Anime;
+import model.AnimeDAO;
 import utilities.Helpers;
 
 import java.util.ArrayList;
@@ -22,7 +23,9 @@ public class Sort {
 
         };
         sort_program:while(true){
-            choice = Helpers.getChoice(scanner, array);
+            System.out.println("\n** SORT MENU **");
+            choice = Helpers.getChoice(scanner, options);
+            ArrayList<Anime> animes = AnimeDAO.getAnimes();
             switch(choice){
                 case 1:
                     // sort title A-z
@@ -32,10 +35,11 @@ public class Sort {
                     break;
                 case 3:
                     // sort date old-new
-                    Collections.sort(anim);
+                    Collections.sort(animes,(a, b) -> a.getReleaseDate().compareTo(b.getReleaseDate()));
                     break;
                 case 4:
                     // sort date new=old
+                    Collections.sort(animes, (a, b) -> a.getReleaseDate().compareTo(b.getReleaseDate()) * -1);
                     break;
                 case 5:
                     // sort rating 1-10
@@ -53,7 +57,7 @@ public class Sort {
                 default:
                     break sort_program;
             } // close of switch;
-            Helpers.printArray(anime);
+            Helpers.printArray(animes);
             Helpers.pressEnterToContinue(scanner);
         } // close of while
     }

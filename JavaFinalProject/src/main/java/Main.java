@@ -1,5 +1,6 @@
 import model.Anime;
 import model.AnimeDAO;
+import tasks.Sort;
 import utilities.Helpers;
 import utilities.UserInput;
 
@@ -16,7 +17,7 @@ public class Main {
             int choice = 0;
             String[] options ={
                     "Get all anime",
-                    "Sort all anime",
+                    "Sort  anime",
                     "Get an anime",
                     "Add an anime",
                     "Update an anime",
@@ -24,23 +25,16 @@ public class Main {
             };
             main_program:while(true){
                 // To Do:Prompt user for all options
+                System.out.println("\n** MAIN MENU**");
                 choice = Helpers.getChoice(scanner, options);
                 switch(choice){
                     case 1:
                         // Get all records
-                        for(Anime anime: AnimeDAO.getAnimes()){
-                            System.out.println("Title: " + anime.getTitle());
-                            System.out.println("episode: " + anime.getEpisode());
-                            System.out.println("season: " + anime.getSeason());
-                            System.out.println("type: " + anime.getType());
-                            System.out.println("rating: " + anime.getRating());
-                            System.out.println("author: " + anime.getAuthor());
-                            System.out.println("release date: " + anime.getReleaseDate());
-                            System.out.println();
-                        }
+                        Helpers.printArray(AnimeDAO.getAnimes());
                         break;
                     case 2:
                     // sort all records
+                        Sort.handleTask(scanner);
                         break;
                     case 3:
                         // Get a single records
@@ -58,8 +52,8 @@ public class Main {
                         // exit
                         break main_program;
                 } // close of switch
+                Helpers.pressEnterToContinue(scanner);
             } // close all while
-            Helpers.pressEnterToContinue(scanner);
             System.out.println("Good bye!");
         } // close of Scanner
     } // close of main method
