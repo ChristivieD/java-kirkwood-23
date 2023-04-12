@@ -2,10 +2,12 @@ package model;
 
 import java.time.LocalDate;
 
-public class Anime {
+public class Anime implements Comparable<Anime> {
     private String title;
     private String author;
-    private double minutes;
+    private String type;
+    private int season;
+    private  int episode;
     private  double rating;
 //    private String site;
     private LocalDate releaseDate;
@@ -13,18 +15,21 @@ public class Anime {
     public Anime(){
         title = "unknown";
         author = "unknown";
-        minutes = 0;
+        type = "unknown";
+        season = 0;
+        episode = 0;
         rating = 0;
         releaseDate = LocalDate.now();
         animeCount++;
     }
 
-    public Anime(String title, String author, double minutes, double rating, LocalDate releaseDate){
+    public Anime(String title, String author, String type, int season, int episode, double rating, LocalDate releaseDate){
         this.title = title;
         this.author = author;
-        this.minutes = minutes;
+        this.type = type;
+        this.season = season;
+        this.episode = episode;
         this.rating = rating;
-//        this.site = site;
         this.releaseDate = releaseDate;
         animeCount++;
     }
@@ -37,8 +42,16 @@ public class Anime {
         return author;
     }
 
-    public double getMinutes() {
-        return minutes;
+    public String getType() {
+        return type;
+    }
+
+    public int getSeason() {
+        return season;
+    }
+
+    public int getEpisode() {
+        return episode;
     }
 
     public double getRating() {
@@ -65,20 +78,28 @@ public class Anime {
         this.author = author;
     }
 
-    public void setMinutes(double minutes) {
-        this.minutes = minutes;
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setSeason(int season) {
+        this.season = season;
+    }
+
+    public void setEpisode(int episode) {
+        this.episode = episode;
     }
 
     public void setRating(double rating) {
         this.rating = rating;
     }
 
-//    public void setSite(String site) {
-//        this.site = site;
-//    }
-
     public void setReleaseDate(LocalDate releaseDate) {
         this.releaseDate = releaseDate;
+    }
+
+    public int compareTo(Anime o) {
+        return this.title.compareTo(o.title);
     }
 }
 

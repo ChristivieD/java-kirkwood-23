@@ -179,3 +179,27 @@ An arraylist is a class
 example
 Book [] books = new Book[10];
 ArrayList<Book> books = new ArrayList
+## Chapter 8
+# About Interfaces
+An abstract clas is a class that you can't instantiate
+an object from.
+an interface is an abstract class with only abstract method
+An abstract method is method with not implementation in the parents class.
+child classes must implement them.
+``` java
+
+    public abstract double getArea();
+    ( ; means there is no timplemetation)
+```
+# Class array
+when using an interface use 'implements Comparable'.
+if you return 0 or less, java will not swap the values
+if you return 1 or more, java will swap the values
+comparing two strings will return an integer
+iterator: you can loop to the scanner
+
+An interface is an abstract class with all 
+abstracts methods.
+
+A function interface is an interface with exactly
+one abstract method.

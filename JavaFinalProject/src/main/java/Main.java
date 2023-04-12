@@ -1,12 +1,16 @@
 import model.Anime;
+import model.AnimeDAO;
 import utilities.Helpers;
 import utilities.UserInput;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        AnimeDAO.retrieveData();
         // Only one user input Scanner allowed
         try(Scanner scanner = new Scanner(System.in)){
             int choice = 0;
@@ -24,6 +28,16 @@ public class Main {
                 switch(choice){
                     case 1:
                         // Get all records
+                        for(Anime anime: AnimeDAO.getAnimes()){
+                            System.out.println("Title: " + anime.getTitle());
+                            System.out.println("episode: " + anime.getEpisode());
+                            System.out.println("season: " + anime.getSeason());
+                            System.out.println("type: " + anime.getType());
+                            System.out.println("rating: " + anime.getRating());
+                            System.out.println("author: " + anime.getAuthor());
+                            System.out.println("release date: " + anime.getReleaseDate());
+                            System.out.println();
+                        }
                         break;
                     case 2:
                     // sort all records
@@ -33,18 +47,6 @@ public class Main {
                         break;
                     case 4:
                         // Add a new record
-//                        Anime anime1 = new Anime("Demon slayer", 24,1.99,
-//                                LocalDate.of(2023,04,12));
-//                        System.out.println(anime1.getTitle());
-//                        System.out.println(anime1.getMinutes());
-//                        Anime anime2 = new Anime("Jujutsu kaisen",22.54,2.99,
-//                                LocalDate.of(2023,04,20));
-//                        System.out.println(anime2.getTitle());
-//                        System.out.println(anime2.getMinutes());
-//                        System.out.println(Anime.getAnimeCount());
-//                        Anime anime3 = anime1;
-//                        anime3.setMinutes(24);
-//                        System.out.println(anime1.getMinutes());
                         break;
                     case 5:
                         // Update a single records
@@ -57,6 +59,7 @@ public class Main {
                         break main_program;
                 } // close of switch
             } // close all while
+            Helpers.pressEnterToContinue(scanner);
             System.out.println("Good bye!");
         } // close of Scanner
     } // close of main method
