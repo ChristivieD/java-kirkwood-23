@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class Sort {
-    public static void handleTask(Scanner scanner) {
+public class Sort implements TaskHandler {
+    public void handleTask(Scanner scanner) {
         int choice = 0;
         String [] options = {
                 "sort by title ( A - Z)",
@@ -18,8 +18,8 @@ public class Sort {
                 "sort by release date (new to old)",
                 "sort by rating (low to high)",
                 "sort by rating (high to low)",
-                "sort by minute (short to long)",
-                "sort by minute (long to short)"
+                "sort by season (short to long)",
+                "sort by season (long to short)"
 
         };
         sort_program:while(true){
@@ -29,9 +29,11 @@ public class Sort {
             switch(choice){
                 case 1:
                     // sort title A-z
+                    Collections.sort(animes,(a,b) -> a.getTitle().compareTo((b.getTitle())));
                     break;
                 case 2:
                     // sort title Z-A
+                    Collections.sort(animes,(a,b) -> a.getTitle().compareTo(b.getTitle()) * -1);
                     break;
                 case 3:
                     // sort date old-new
@@ -48,10 +50,10 @@ public class Sort {
                     // sort rating 10-1
                     break;
                 case 7:
-                    // sort minutes 1-24
+                    // sort season 1-20
                     break;
                 case 8:
-                    // sort minutes 24-1
+                    // sort season 20-1
                     break;
                     // exit
                 default:

@@ -50,7 +50,7 @@ public class UserInput {
                 }
             }   catch(InputMismatchException e){
                 scanner.nextLine(); // read enter key press
-                System.out.println("Invalide number");
+                System.out.println("Invalid number");
             }
         }
         return value;

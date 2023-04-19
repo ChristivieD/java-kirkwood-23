@@ -1,5 +1,6 @@
 import model.Anime;
 import model.AnimeDAO;
+import tasks.Add;
 import tasks.Sort;
 import utilities.Helpers;
 import utilities.UserInput;
@@ -34,13 +35,14 @@ public class Main {
                         break;
                     case 2:
                     // sort all records
-                        Sort.handleTask(scanner);
+                        new Sort().handleTask(scanner);
                         break;
                     case 3:
                         // Get a single records
                         break;
                     case 4:
                         // Add a new record
+                        new Add().handleTask(scanner);
                         break;
                     case 5:
                         // Update a single records

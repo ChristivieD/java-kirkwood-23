@@ -4,6 +4,7 @@ import org.apache.commons.lang.WordUtils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -12,10 +13,12 @@ import java.util.Scanner;
 
 public class AnimeDAO {
     private static ArrayList<Anime> animes;
+    private static String filePath = new File("").getAbsolutePath()+"\\JavaFinalProject\\src\\main\\resources\\Anime_data.txt";
+    private static DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("M/d/yyyy");
 
     public static void retrieveData() {
         if(animes == null){
-            try(Scanner scanner = new Scanner(new File("JavaFinalProject\\src\\main\\resources\\Anime_data.txt"))){
+            try(Scanner scanner = new Scanner(new File(filePath))){
                 animes = new ArrayList<>();
                 scanner.nextLine(); // read in the file row and don't do anything with it.
                 while(scanner.hasNextLine()){
@@ -40,7 +43,33 @@ public class AnimeDAO {
             }
         }
     }
+
+    private static  void writeData(){
+        try(PrintWriter writer = new PrintWriter(new File(filePath))){
+            writer.println("demon_slayer,Koyoharu Gotouge,\"adventure, dark fantasy,martial arts\",2,26,8.7,2/3/2023\n");
+            for(Anime anime : animes){
+                writer.printf("%s\t%s\t%s\t&\t%s\n",
+                        anime.getTitle(), anime.getAuthor().toUpperCase(),
+                        anime.getType(),anime.getSeason(),
+                        anime.getEpisode(),anime.getRating(),
+                        anime.getReleaseDate().format(dateFormat));
+            }
+        }catch (FileNotFoundException e){
+            System.out.println("THe write data function could not be processed ");
+            System.out.println(e.getMessage());
+        }
+
+    }
     public static ArrayList<Anime> getAnimes(){
         return animes;
     }
+
+    public static void  addAnime(Anime anime){
+        // add to the array
+        animes.add(anime);
+        // update the csv file
+        writeData();
+
+    }
+
 }

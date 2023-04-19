@@ -1,11 +1,13 @@
-title	author	gender	season	episode	rating	release date
-demon_slayer	Koyoharu Gotouge	"adventure, dark fantasy,martial arts"	2	26	8.7	2/3/2023
-jujutsu no kaisen	Gege Akutami	"adventure, dark fantasy, supernatural"	1	24	8.5	10/3/2020
-Dragon ball Z	Akira Toriyama	"adventure, martial arts, comedy, humor"	9	291	8.8	4/26/1989
-Soul eater	Atsushi Ohkubo	"action, dark comedy, dark fantasy"	2	51	7.8	9/6/2010
-Death note	Takeshi Obata	"mystery, Psychological thriller, supernatural thriller"	1	37	9	10/21/2007
-Blue lock	Muneyuki Kaneshiro	"sport, thriller"	1	24	7.5	09/22/2022
-City hunter	Tsukasa Hojo	"action, detective comedy"	1	51	8.1	8/31/2005
-Capitain Tsubasa	Yoichi Takahashi	sports	1	52	8.2	8/27/2020
-Bleach	"masashi Sogo, tsuyoshi Kida, kento Shimoyama"	"adventure, supernatural"	16	366	8.2	9/9/2006
-Code Geass	Ichiro Okouchi	"science-fiction, mecha, fantasy, drama"	2	50	8.7	11/30/2007
+demon_slayer,Koyoharu Gotouge,"adventure, dark fantasy,martial arts",2,26,8.7,2/3/2023
+
+Bleach	"MASASHI SOGO, TSUYOSHI KIDA, KENTO SHIMOYAMA"	"adventure, Supernatural"	&	16
+Blue Lock	MUNEYUKI KANESHIRO	"sport, Thriller"	&	1
+Capitain Tsubasa	YOICHI TAKAHASHI	Sports	&	1
+City Hunter	TSUKASA HOJO	"action, Detective Comedy"	&	1
+Code Geass	ICHIRO OKOUCHI	"science-fiction, Mecha, Fantasy, Drama"	&	2
+Death Note	TAKESHI OBATA	"mystery, Psychological Thriller, Supernatural Thriller"	&	1
+Demon_slayer	KOYOHARU GOTOUGE	"adventure, Dark Fantasy,martial Arts"	&	2
+Dragon Ball Z	AKIRA TORIYAMA	"adventure, Martial Arts, Comedy, Humor"	&	9
+Jujutsu No Kaisen	GEGE AKUTAMI	"adventure, Dark Fantasy, Supernatural"	&	1
+Soul Eater	ATSUSHI OHKUBO	"action, Dark Comedy, Dark Fantasy"	&	2
+lookism	UNKNOWN	unknown	&	0
