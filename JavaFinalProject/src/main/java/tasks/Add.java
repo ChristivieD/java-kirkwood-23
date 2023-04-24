@@ -17,6 +17,7 @@ public class Add implements TaskHandler{
         int episode = UserInput.getInt(scanner, "How many episodes are there ? ", 0);
         int season = UserInput.getInt(scanner,"How many seasons are there? ");
         // final project part3 - write getDouble methods in the UserInput class
+        double rating = UserInput.getDouble(scanner,"what is the rating?");
         // instantiate an object
         Anime anime = new Anime();
         anime.setTitle(title);
@@ -26,6 +27,7 @@ public class Add implements TaskHandler{
         anime.setEpisode(episode);
         anime.setSeason(season);
         // set the double in your own
+        anime.setRating(rating);
 
         AnimeDAO.addAnime(anime);
         // add to the array

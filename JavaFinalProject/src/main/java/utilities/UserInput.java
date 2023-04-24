@@ -7,6 +7,11 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class UserInput {
+    // Get double
+    public static double getDouble(Scanner scanner, String prompt) {
+        return getDouble(scanner,prompt);
+
+    }
     // Get String
     public static String getString(Scanner scanner, String prompt) {
         System.out.println(prompt + ": ");

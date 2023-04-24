@@ -40,7 +40,7 @@ public class Sort implements TaskHandler {
                     Collections.sort(animes,(a, b) -> a.getReleaseDate().compareTo(b.getReleaseDate()));
                     break;
                 case 4:
-                    // sort date new=old
+                    // sort date new-old
                     Collections.sort(animes, (a, b) -> a.getReleaseDate().compareTo(b.getReleaseDate()) * -1);
                     break;
                 case 5:
