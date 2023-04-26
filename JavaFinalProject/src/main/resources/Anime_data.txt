@@ -1,5 +1,5 @@
+Title   author  type    season  episode rating  release_date
 demon_slayer,Koyoharu Gotouge,"adventure, dark fantasy,martial arts",2,26,8.7,2/3/2023
-
 Bleach	"MASASHI SOGO, TSUYOSHI KIDA, KENTO SHIMOYAMA"	"adventure, Supernatural"	&	16
 Blue Lock	MUNEYUKI KANESHIRO	"sport, Thriller"	&	1
 Capitain Tsubasa	YOICHI TAKAHASHI	Sports	&	1

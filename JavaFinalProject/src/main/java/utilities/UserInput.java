@@ -32,6 +32,7 @@ public class UserInput {
         return value.equalsIgnoreCase("yes") || value.equalsIgnoreCase("y");
 
     }
+
     // Get any number
     public static int getInt(Scanner scanner, String prompt){
         return getInt(scanner, prompt, Integer.MIN_VALUE, Integer.MAX_VALUE);

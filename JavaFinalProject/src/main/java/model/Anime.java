@@ -1,8 +1,18 @@
 package model;
 
+import utilities.Helpers;
+
 import java.time.LocalDate;
 
 public class Anime implements Comparable<Anime> {
+    @Override
+    public String toString() {
+        return String.format("%-40s\t%-20s\t%10.2f\t%5d\t%-6s",
+        this.title, Helpers.formatDate(this.releaseDate), this.author,
+                this.type, this.season,
+        this.episode, this.rating);
+    }
+
     private String title;
     private String author;
     private String type;
@@ -20,6 +30,11 @@ public class Anime implements Comparable<Anime> {
         rating = 0;
         releaseDate = LocalDate.now();
         animeCount++;
+    }
+
+    @Override
+    public int compareTo(Anime o) {
+        return this.title.compareTo(o.title);
     }
 
     public Anime(String title, String author, String type, int season, int episode, double rating, LocalDate releaseDate){
@@ -93,8 +108,11 @@ public class Anime implements Comparable<Anime> {
         this.releaseDate = releaseDate;
     }
 
-    public int compareTo(Anime o) {
-        return this.title.compareTo(o.title);
+
+    public static String getHeaderRow() {
+        return String.format("%-40s\t%-20s\t%20s\t5s\t%-6s",
+                "Title", "author", "type", "Season",
+                "episode"," rating");
     }
 }
 

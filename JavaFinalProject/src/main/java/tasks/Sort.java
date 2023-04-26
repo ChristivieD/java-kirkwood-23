@@ -6,6 +6,7 @@ import utilities.Helpers;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Sort implements TaskHandler {
@@ -29,7 +30,7 @@ public class Sort implements TaskHandler {
             switch(choice){
                 case 1:
                     // sort title A-z
-                    Collections.sort(animes,(a,b) -> a.getTitle().compareTo((b.getTitle())));
+                    Collections.sort(animes, Comparator.comparing(Anime::getTitle));
                     break;
                 case 2:
                     // sort title Z-A
@@ -37,7 +38,7 @@ public class Sort implements TaskHandler {
                     break;
                 case 3:
                     // sort date old-new
-                    Collections.sort(animes,(a, b) -> a.getReleaseDate().compareTo(b.getReleaseDate()));
+                    Collections.sort(animes, Comparator.comparing(Anime::getReleaseDate));
                     break;
                 case 4:
                     // sort date new-old
@@ -45,15 +46,19 @@ public class Sort implements TaskHandler {
                     break;
                 case 5:
                     // sort rating 1-10
+                    Collections.sort(animes, Comparator.comparing(Anime::getRating));
                     break;
                 case 6:
                     // sort rating 10-1
+                    Collections.sort(animes,Comparator.comparingDouble(Anime::getRating).reversed());
                     break;
                 case 7:
                     // sort season 1-20
+                    Collections.sort(animes,Comparator.comparingInt((Anime::getSeason)));
                     break;
                 case 8:
                     // sort season 20-1
+                    Collections.sort(animes,Comparator.comparingInt(Anime::getSeason).reversed() );
                     break;
                     // exit
                 default:

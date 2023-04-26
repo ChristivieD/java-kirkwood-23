@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class AnimeDAO {
     private static ArrayList<Anime> animes;
-    private static String filePath = new File("").getAbsolutePath()+"\\JavaFinalProject\\src\\main\\resources\\Anime_data.txt";
+    private static String filePath = new File("").getAbsolutePath() + "\\JavaFinalProject\\src\\main\\resources\\Anime_data.txt";
     private static DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("M/d/yyyy");
 
     public static void retrieveData() {
@@ -31,8 +31,7 @@ public class AnimeDAO {
                     anime.setSeason(Integer.parseInt(values[3]));
                     anime.setAuthor(WordUtils.capitalize(values[1]));
                     anime.setRating(Double.parseDouble(values[5]));
-                    DateTimeFormatter format = DateTimeFormatter.ofPattern("M/d/yyyy");
-                    anime.setReleaseDate(LocalDate.parse(values[6], format));
+                    anime.setReleaseDate(LocalDate.parse(values[6], dateFormat));
                     // set remaining values here
                     animes.add(anime);
                 }
@@ -46,9 +45,9 @@ public class AnimeDAO {
 
     private static  void writeData(){
         try(PrintWriter writer = new PrintWriter(new File(filePath))){
-            writer.println("demon_slayer,Koyoharu Gotouge,\"adventure, dark fantasy,martial arts\",2,26,8.7,2/3/2023\n");
+            writer.println("Title\tauthor\ttype\tseason\tepisode\trating\trelease_date");
             for(Anime anime : animes){
-                writer.printf("%s\t%s\t%s\t&\t%s\n",
+                writer.printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\n",
                         anime.getTitle(), anime.getAuthor().toUpperCase(),
                         anime.getType(),anime.getSeason(),
                         anime.getEpisode(),anime.getRating(),
