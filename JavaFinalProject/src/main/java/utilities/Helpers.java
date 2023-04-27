@@ -11,8 +11,11 @@ import java.util.Scanner;
 
 public class Helpers {
     public static int getChoice(Scanner scanner, String[] options){
-        int choice = UserInput.getInt(scanner, "Choose an option 1-" + (options.length + 1),1,(options.length) + 1);
-        return choice;
+        for(int i = 0; i < options.length; i++){
+            System.out.println((i + 1) + " )" + options[i]);
+        }
+        System.out.println((options.length + 1) + " ) Exit");
+        return UserInput.getInt(scanner,"Choose an options",1, options.length +1);
     }
     public static void pressEnterToContinue(Scanner scanner){
         UserInput.getString(scanner,"press enter to continue");

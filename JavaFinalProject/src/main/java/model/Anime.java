@@ -7,10 +7,9 @@ import java.time.LocalDate;
 public class Anime implements Comparable<Anime> {
     @Override
     public String toString() {
-        return String.format("%-40s\t%-20s\t%10.2f\t%5d\t%-6s",
-        this.title, Helpers.formatDate(this.releaseDate), this.author,
-                this.type, this.season,
-        this.episode, this.rating);
+        return String.format("%-40s\t%-20s\t%-20s\t%5s\t%5s\t%5s\t%-20s",
+        this.title, this.author,this.type, this.season,
+        this.episode, this.rating,Helpers.formatDate(this.releaseDate));
     }
 
     private String title;
@@ -110,9 +109,9 @@ public class Anime implements Comparable<Anime> {
 
 
     public static String getHeaderRow() {
-        return String.format("%-40s\t%-20s\t%20s\t5s\t%-6s",
+        return String.format("%-40s\t%-20s\t%-20s\t%5s\t%5s\t%5s\t%-20s",
                 "Title", "author", "type", "Season",
-                "episode"," rating");
+                "episode"," rating", "release date");
     }
 }
 

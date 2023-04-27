@@ -1,6 +1,7 @@
 import model.Anime;
 import model.AnimeDAO;
 import tasks.Add;
+import tasks.Search;
 import tasks.Sort;
 import utilities.Helpers;
 import utilities.UserInput;
@@ -39,6 +40,7 @@ public class Main {
                         break;
                     case 3:
                         // Get a single records
+                        new Search().handleTask(scanner);
                         break;
                     case 4:
                         // Add a new record

@@ -1,6 +1,7 @@
 import java.math.BigInteger;
+import java.util.Scanner;
 
-import static org.apache.commons.lang.time.DurationFormatUtils.d;
+//import static org.apache.commons.lang.time.DurationFormatUtils;
 
 public class Assignment5 {
     public static void main(String[] args) {
@@ -21,6 +22,21 @@ public class Assignment5 {
         Fraction fraction17 = new Fraction();
         Fraction fraction18 = new Fraction();
         Fraction fraction19 = new Fraction();
+        Fraction fraction20 = new Fraction(13,5);
+        Fraction fraction21 = new Fraction(4,8);
+        Fraction fraction22 = new Fraction(-13,-5);
+        Fraction fraction23 = new Fraction(13,-5);
+        Scanner scanner = new Scanner(System.in);
+        // first fraction
+        System.out.println("enter the first numerator: ");
+        int num1 = scanner.nextInt();
+        System.out.println("enter the first denominator: ");
+        int denom1 = scanner.nextInt();
+        // second fraction
+        System.out.println("enter the second numerator: ");
+        int num2 = scanner.nextInt();
+        System.out.println("enter the second denominator: ");
+        int denom2 = scanner.nextInt();
         System.out.println(fraction1);
 
         Fraction  fraction2 = null;
@@ -155,11 +171,70 @@ public class Assignment5 {
         }
         System.out.println(fraction18.mixedNumber());
         try{
-            fraction1 = new Fraction(-4,-5);
+            fraction19 = new Fraction(-4,-5);
         } catch (IllegalArgumentException e){
             System.out.println(e.getMessage());
         }
-        System.out.println(fraction13.mixedNumber());
+        System.out.println(fraction19.mixedNumber());
+        try {
+            fraction20 = new Fraction(13, 5);
+
+        }
+        catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+            fraction20 = new Fraction();
+        }
+        fraction20.setNumerator(13);
+        try{
+            fraction20.setDenominator(5);
+        }
+        catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
+        System.out.println(fraction20.add(fraction21));
+        try {
+            fraction22 = new Fraction(-13, -5);
+
+        }
+        catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+            fraction22 = new Fraction();
+        }
+        fraction22.setNumerator(-13);
+        try{
+            fraction22.setDenominator(-5);
+        }
+        catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
+        System.out.println(fraction22.add(fraction23));
+
+
+        Fraction fraction0 = null;
+        Fraction fraction = null;
+        try {
+            fraction0 = new Fraction(num1, denom1);
+            fraction = new Fraction(num2, denom2);
+
+        }
+        catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+            fraction0 = new Fraction();
+        }
+        fraction0.setNumerator(num1);
+        try{
+            fraction0.setDenominator(denom1);
+        }
+        catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
+        try{
+            System.out.println(fraction0.add(fraction));
+        }
+        catch(NullPointerException e){
+            System.out.println(e.getMessage());
+        }
+
 
     }
 }
@@ -212,8 +287,8 @@ class Fraction{
      }
 
     public Fraction simplify(){
-        int gcd = greatestCommonDivisor(this.numerator, this.denominator);
-        Fraction simplifiedFraction = new Fraction(this.numerator/ gcd , this.denominator/gcd);
+        int gcd = greatestCommonDivisor(numerator, denominator);
+        Fraction simplifiedFraction = new Fraction(numerator/ gcd , denominator/gcd);
         if((simplifiedFraction.numerator >= 0 && simplifiedFraction.denominator < 0) || (simplifiedFraction.numerator < 0 && simplifiedFraction.denominator < 0)){
             simplifiedFraction.numerator *= -1;
             simplifiedFraction.denominator *= -1;
@@ -222,30 +297,38 @@ class Fraction{
         return simplifiedFraction;
     }
     public String mixedNumber(){
-        simplify();
-        int quotient = this.numerator / this.denominator;
-        int remainder = this.numerator % this.denominator;
-        if(this.denominator == 1 || this.numerator == 0){
-            return Integer.toString(this.numerator);
-        }else if(this.numerator > this.denominator){
+        Fraction fraction = simplify();
+        int quotient = fraction.numerator / fraction.denominator;
+        int remainder = fraction.numerator % fraction.denominator;
+        if(fraction.denominator == 1 || fraction.numerator == 0){
+            return Integer.toString(fraction.numerator);
+        }else if(fraction.numerator > fraction.denominator){
             if(remainder == 0){
                 return Integer.toString(quotient);
             }
             else{
-                return String.format("%d %d/%d", quotient,remainder, this.denominator);
+                return String.format("%d %d/%d", quotient,remainder, fraction.denominator);
             }
-        }else if(this.numerator < 0 && Math.abs(this.numerator) > this.denominator){
-            return String.format("%d %d/%d", quotient,remainder * -1, this.denominator);
+        }else if(fraction.numerator < 0 && Math.abs(fraction.numerator) > fraction.denominator){
+            if(remainder == 0){
+                return Integer.toString(quotient);
+            }
+            else{
+                return String.format("%d %d/%d", quotient,remainder * -1, fraction.denominator);
+            }
+        } else if(fraction.numerator == fraction.denominator){
+            return "1";
         } else{
-            return String.format("%d/%d", this.numerator, this.denominator);
+            return String.format("%d/%d", fraction.numerator, fraction.denominator);
         }
 
     }
 
     public String add(Fraction other){
 
-//        Fraction addedFraction = new Fraction(this.numerator* this.denominator + this.numerator * this.denominator);
-        return " ";
+       Fraction addedFraction = new Fraction((this.numerator* other.denominator) + (other.numerator * this.denominator),
+               this.denominator * other.denominator);
+        return this.mixedNumber() + " + " + other.mixedNumber() + " = " + addedFraction.mixedNumber();
     }
 
 }
