@@ -9,9 +9,34 @@ import java.util.Scanner;
 public class UserInput {
     // Get double
     public static double getDouble(Scanner scanner, String prompt) {
-        return getDouble(scanner,prompt);
+        return getDouble(scanner,prompt,Double.MIN_VALUE, Double.MAX_VALUE);
 
     }
+    public static double getDouble(Scanner scanner, String prompt, double min){
+        return getDouble(scanner, prompt, min, Double.MAX_VALUE);
+    }
+
+    public static double getDouble(Scanner scanner, String prompt, double min, double max) {
+        double v = 0;
+        while(true){
+            System.out.println(prompt + "[from " + min + "to " + max + "]: ");
+            try {
+                v = scanner.nextDouble();
+                scanner.nextLine();
+                if(v < min || v > max){
+                    System.out.println("V must be between " + min + "and " + max + ".");
+                } else{
+                    break;
+                }
+            } catch(NumberFormatException e){
+                scanner.nextLine();
+                System.out.println("invalid number");
+            }
+
+        }
+        return  v;
+    }
+
     // Get String
     public static String getString(Scanner scanner, String prompt) {
         System.out.println(prompt + ": ");

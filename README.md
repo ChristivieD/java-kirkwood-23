@@ -203,3 +203,54 @@ abstracts methods.
 
 A function interface is an interface with exactly
 one abstract method.
+
+example of question
+short cast evaluation
+If(a1 && a2)
+if(a1||a2)
+if one id true yhe other one is false
+++ a means before the values are printted it means add 1 to the number first(add 1)
+a++ means add one after the line is execute(still the same number)
+reverse  int num = 658
+num % 10 => 8
+num / 10 => 58
+print 
+casting do that with a double
+escaping characters:
+i watched "the super mario bros" movie this weekend.
+write a switch and a if statement # view the midterm exam
+tenary operatoer with an if statement
+String output = " "
+if (temp > 80){
+ output = "it's hot"
+} esle if(temp > 65){
+    output = "it's warm"
+} else{
+output = "it's chilly"}
+answer: String output = (temp> 80)? "it's hot" : (temp > 65) ? "it's warm" : it's chilly
+== boolean
+.equals() comparison
+while and for loop
+```java
+public class Myclass{
+    public  static main(String args[]){
+        String[] states = {"iowa", "nebraska"};
+        for(int i = 0; i < states.length; i++){
+        int j =states[i].length() - 1;
+        while(j>0){
+            System.out.print(states[i].charAt(j));
+            j--;
+        }
+        System.out.println();
+        }
+    }
+}
+
+```
+explain how to call  a static method and how we can call it 
+use an example
+break use and a loop and switch
+continue use skip the current integration on the loop
+return end the method 
+know what is an abstract methods
+what is an interface
