@@ -1,12 +1,13 @@
 Title	author	type	season	episode	rating	release_date
-Bleach	"MASASHI SOGO, TSUYOSHI KIDA, KENTO SHIMOYAMA"	"adventure, Supernatural"	16	366	8.2	9/9/2006
 Blue Lock	MUNEYUKI KANESHIRO	"sport, Thriller"	1	24	7.5	9/22/2022
 Capitain Tsubasa	YOICHI TAKAHASHI	Sports	1	52	8.2	8/27/2020
 City Hunter	TSUKASA HOJO	"action, Detective Comedy"	1	51	8.1	8/31/2005
-Code Geass	ICHIRO OKOUCHI	"science-fiction, Mecha, Fantasy, Drama"	2	50	8.7	11/30/2007
 Death Note	TAKESHI OBATA	"mystery, Psychological Thriller, Supernatural Thriller"	1	37	9.0	10/21/2007
-Demon_slayer	KOYOHARU GOTOUGE	"adventure, Dark Fantasy,martial Arts"	2	26	8.7	2/3/2023
-Dragon Ball Z	AKIRA TORIYAMA	"adventure, Martial Arts, Comedy, Humor"	9	291	8.8	4/26/1989
 Jujutsu No Kaisen	GEGE AKUTAMI	"adventure, Dark Fantasy, Supernatural"	1	24	8.5	10/3/2020
+Code Geass	ICHIRO OKOUCHI	"science-fiction, Mecha, Fantasy, Drama"	2	50	8.7	11/30/2007
+Demon_slayer	KOYOHARU GOTOUGE	"adventure, Dark Fantasy,martial Arts"	2	26	8.7	2/3/2023
 Soul Eater	ATSUSHI OHKUBO	"action, Dark Comedy, Dark Fantasy"	2	51	7.8	9/6/2010
+Dragon Ball Z	AKIRA TORIYAMA	"adventure, Martial Arts, Comedy, Humor"	9	291	8.8	4/26/1989
 Fairy Tail	HIRO MASHIMA	Magic	9	328	7.9	6/12/2009
+Bleach	"MASASHI SOGO, TSUYOSHI KIDA, KENTO SHIMOYAMA"	"adventure, Supernatural"	16	366	8.2	9/9/2006
+Lookism	PARK TAE-JOON	high school	1	8	8.0	12/8/2022
