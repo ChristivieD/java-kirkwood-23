@@ -13,12 +13,39 @@ public class Solution {
     }
 
     public static String toHex(String binaryNumber) {
-        //write your code here
-        return null;
+        if (binaryNumber == null || binaryNumber.isEmpty()) {
+            return "";
+        }
+        if (!binaryNumber.matches("[01]+")) {
+            return "";
+        }
+        int length = binaryNumber.length();
+        if (length % 4 != 0) {
+            binaryNumber = "0".repeat(4 - length % 4) + binaryNumber;
+            length = binaryNumber.length();
+        }
+        StringBuilder hexBuilder = new StringBuilder(length / 4);
+        for (int i = 0; i < length; i += 4) {
+            int decimal = Integer.parseInt(binaryNumber.substring(i, i + 4), 2);
+            hexBuilder.append(Integer.toHexString(decimal));
+        }
+        return hexBuilder.toString();
     }
 
     public static String toBinary(String hexNumber) {
-        //write your code here
-        return null;
+        if (hexNumber == null || hexNumber.isEmpty()) {
+            return "";
+        }
+        if (!hexNumber.matches("[0-9a-fA-F]+")) {
+            return "";
+        }
+        int length = hexNumber.length();
+        StringBuilder binaryBuilder = new StringBuilder(length * 4);
+        for (int i = 0; i < length; i++) {
+            int decimal = Character.digit(hexNumber.charAt(i), 16);
+            String binary = Integer.toBinaryString(decimal);
+            binaryBuilder.append("0".repeat(4 - binary.length())).append(binary);
+        }
+        return binaryBuilder.toString();
     }
 }

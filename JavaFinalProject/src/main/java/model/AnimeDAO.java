@@ -32,6 +32,7 @@ public class AnimeDAO {
                     anime.setAuthor(WordUtils.capitalize(values[1]));
                     anime.setRating(Double.parseDouble(values[5]));
                     anime.setReleaseDate(LocalDate.parse(values[6], dateFormat));
+                    anime.setBestAnime(Boolean.parseBoolean(values[7]));
                     // set remaining values here
                     animes.add(anime);
                 }
@@ -45,13 +46,14 @@ public class AnimeDAO {
 
     private static  void writeData(){
         try(PrintWriter writer = new PrintWriter(new File(filePath))){
-            writer.println("Title\tauthor\ttype\tseason\tepisode\trating\trelease_date");
+            writer.println("Title\tauthor\ttype\tseason\tepisode\trating\trelease_date\tbest_anime");
             for(Anime anime : animes){
-                writer.printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\n",
+                writer.printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n",
                         anime.getTitle(), anime.getAuthor().toUpperCase(),
                         anime.getType(),anime.getSeason(),
                         anime.getEpisode(),anime.getRating(),
-                        anime.getReleaseDate().format(dateFormat));
+                        anime.getReleaseDate().format(dateFormat)
+                );
             }
         }catch (FileNotFoundException e){
             System.out.println("THe write data function could not be processed ");

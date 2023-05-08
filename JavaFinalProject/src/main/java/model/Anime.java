@@ -7,9 +7,9 @@ import java.time.LocalDate;
 public class Anime implements Comparable<Anime> {
     @Override
     public String toString() {
-        return String.format("%-40s\t%-20s\t%-20s\t%5s\t%5s\t%5s\t%-20s",
+        return String.format("%-20s\t%-20s\t%-20s\t%5s\t%5s\t%5s\t%-10s\t%-6s",
         this.title, this.author,this.type, this.season,
-        this.episode, this.rating,Helpers.formatDate(this.releaseDate));
+        this.episode, this.rating,Helpers.formatDate(this.releaseDate), this.bestAnime? "yes" : "no");
     }
 
     private String title;
@@ -18,6 +18,8 @@ public class Anime implements Comparable<Anime> {
     private int season;
     private  int episode;
     private  double rating;
+
+    private boolean bestAnime;
     private LocalDate releaseDate;
     private static int animeCount = 0;
     public Anime(){
@@ -71,6 +73,10 @@ public class Anime implements Comparable<Anime> {
         return rating;
     }
 
+    public boolean isBestAnime() {
+        return bestAnime;
+    }
+
     public LocalDate getReleaseDate() {
         return releaseDate;
     }
@@ -102,6 +108,9 @@ public class Anime implements Comparable<Anime> {
     public void setRating(double rating) {
         this.rating = rating;
     }
+    public void setBestAnime(boolean bestAnime) {
+        this.bestAnime = bestAnime;
+    }
 
     public void setReleaseDate(LocalDate releaseDate) {
         this.releaseDate = releaseDate;
@@ -109,9 +118,9 @@ public class Anime implements Comparable<Anime> {
 
 
     public static String getHeaderRow() {
-        return String.format("%-40s\t%-20s\t%-20s\t%5s\t%5s\t%5s\t%-20s",
+        return String.format("%-20s\t%-20s\t%-20s\t%5s\t%5s\t%5s\t%-10s\t%-6s",
                 "Title", "author", "type", "Season",
-                "episode"," rating", "release date");
+                "episode"," rating", "release date", "best anime");
     }
 }
 
